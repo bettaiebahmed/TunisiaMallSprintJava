@@ -42,9 +42,9 @@ public class ReclamationForm extends JPanel{
     public JTextArea message;
     
     private JButton send;
-      private static String USER_NAME = "ahmedbenadelbettaieb1994@gmail.com";  // GMail user name (just the part before "@gmail.com")
-    private static String PASSWORD = "dayerlehya2012"; // GMail password
-    private static String RECIPIENT = "ahmedbenadelbettaieb1994@gmail.com";
+      private static String USER_NAME = "mohamed.ncir.ardia@gmail.com";  // GMail user name (just the part before "@gmail.com")
+    private static String PASSWORD = "GODfadher"; // GMail password
+    private static String RECIPIENT = "mohamed.ncir.ardia@gmail.com";
 
     public ReclamationForm() throws MessagingException {
         nomLabel = new JLabel("Votre nom : ");

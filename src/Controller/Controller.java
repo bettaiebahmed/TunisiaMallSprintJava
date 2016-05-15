@@ -30,7 +30,6 @@ public class Controller {
         String gender = ev.getGender();
         String gov=ev.getGov();
         Person person = new Person(age, name, occupation, employement, gov, gender);
-        db.addPerson(person);
             
     }
 }

@@ -5,6 +5,7 @@
  */
 package gui;
 
+import tunisiamalltest.Pidev;
 import Controller.Controller;
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;
@@ -101,7 +102,6 @@ public class FormPanel extends JPanel {
                 try {
                     totale = totale + db.getPrix(ageList.getSelectedValue().toString());
                     sommeLabel.setText("Totale : " + totale+"DT");
-                    db.reduireqte(db.getIdbyName(ageList.getSelectedValue().toString()), 1);
                 } catch (Exception ex) {
                     Logger.getLogger(FormPanel.class.getName()).log(Level.SEVERE, null, ex);
                 }
@@ -117,8 +117,6 @@ public class FormPanel extends JPanel {
                 try {
               totale = totale - db.getPrix(achat.getSelectedValue().toString());
               sommeLabel.setText("Totale : " + totale+"DT");
-                 db.ajouterqte(db.getIdbyName(achat.getSelectedValue().toString()), 1);
-
                 } 
                 catch (Exception ex) {
                     Logger.getLogger(FormPanel.class.getName()).log(Level.SEVERE, null, ex);

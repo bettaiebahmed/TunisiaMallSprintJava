@@ -52,7 +52,7 @@ public class Database {
     public void addProduct(Achat achat) throws Exception {
         String req = "insert into achat (bought, totale,iduser,adresse,ccv) values (?,?,?,?,?)";
         try {
-            String connectionUrl = "jdbc:mysql://localhost:3306/tunisiamalldb";
+            String connectionUrl = "jdbc:mysql://localhost:3306/tunisiamall";
             Connection con = DriverManager.getConnection(connectionUrl, "root", "");
             pst = con.prepareStatement(req);
 
@@ -79,7 +79,7 @@ public class Database {
      public void reduireqte(int id,int qte) throws Exception {
         String req = "update Produit set QuantiteStock=QuantiteStock-1 where id=?";
         try {
-            String connectionUrl = "jdbc:mysql://localhost:3306/tunisiamalldb";
+            String connectionUrl = "jdbc:mysql://localhost:3306/tunisiamall";
             Connection con = DriverManager.getConnection(connectionUrl, "root", "");
             pst = con.prepareStatement(req);
 
@@ -101,7 +101,7 @@ public class Database {
      public void ajouterqte(int id,int qte) throws Exception {
         String req = "update Produit set QuantiteStock=QuantiteStock+1 where id=?";
         try {
-            String connectionUrl = "jdbc:mysql://localhost:3306/tunisiamalldb";
+            String connectionUrl = "jdbc:mysql://localhost:3306/tunisiamall";
             Connection con = DriverManager.getConnection(connectionUrl, "root", "");
             pst = con.prepareStatement(req);
 
@@ -124,7 +124,7 @@ public class Database {
     public float getPrix(String nom) throws SQLException, Exception {
         String req = "Select * from Produit where nomProduit=?";
         try {
-            String connectionUrl = "jdbc:mysql://localhost:3306/tunisiamalldb";
+            String connectionUrl = "jdbc:mysql://localhost:3306/tunisiamall";
             Connection con = DriverManager.getConnection(connectionUrl, "root", "");
             pst = con.prepareStatement(req);
             pst.setString(1, nom);
@@ -149,7 +149,7 @@ public class Database {
     public int getIdbyName(String nom) throws SQLException, Exception {
         String req = "Select id from Produit where nomProduit=?";
         try {
-            String connectionUrl = "jdbc:mysql://localhost:3306/tunisiamalldb";
+            String connectionUrl = "jdbc:mysql://localhost:3306/tunisiamall";
             Connection con = DriverManager.getConnection(connectionUrl, "root", "");
             pst = con.prepareStatement(req);
             pst.setString(1, nom);
@@ -175,7 +175,7 @@ public class Database {
     public ArrayList<Produit> getProduit() throws Exception {
         String req = "Select * from Produit ";
         try {
-            String connectionUrl = "jdbc:mysql://localhost:3306/tunisiamalldb";
+            String connectionUrl = "jdbc:mysql://localhost:3306/tunisiamall";
             Connection con = DriverManager.getConnection(connectionUrl, "root", "");
             pst = con.prepareStatement(req);
             ResultSet rs = pst.executeQuery();
@@ -209,7 +209,7 @@ public class Database {
         String req = "Select a.prixdetaille,a.nomProduit,a.TypeProduit,a.nom_categorie,m.path,a.id from Produit a,media"
                 + " m where a.image=m.id Group By a.nom_categorie ";
         try {
-            String connectionUrl = "jdbc:mysql://localhost:3306/tunisiamalldb";
+            String connectionUrl = "jdbc:mysql://localhost:3306/tunisiamall";
             Connection con = DriverManager.getConnection(connectionUrl, "root", "");
             pst = con.prepareStatement(req);
             ResultSet rs = pst.executeQuery();

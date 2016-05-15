@@ -5,6 +5,7 @@
  */
 package gui;
 
+import tunisiamalltest.Pidev;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
@@ -59,7 +60,7 @@ public class PicturesPanel extends JPanel {
                 v2.addElement(p.getPrixAchat());
                 v2.addElement(p.getGenreArticle());
                 
-                ImageIcon img = new ImageIcon("C:\\wamp\\www\\TunisiaMallFinalVersion\\web\\uploads\\" + p.getPath());
+                ImageIcon img = new ImageIcon("C:\\wamp\\www\\TunisiaMallProject\\web\\uploads\\" + p.getPath());
 
                 v2.addElement(img);
 
